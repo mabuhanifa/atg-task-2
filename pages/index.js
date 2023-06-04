@@ -1,5 +1,6 @@
 import AllNames from "@/components/AllNames";
 import Pagination from "@/components/Pagination";
+import Spinner from "@/components/Spinner";
 import User from "@/components/User";
 import { useEffect, useState } from "react";
 
@@ -51,6 +52,7 @@ export default function Home() {
   };
   return (
     <>
+    <Spinner/>
       <section className="flex gap-x-[105px] justify-center">
         <div className="w-[623px] ml-[105px] mt-20">
           <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
