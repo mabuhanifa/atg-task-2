@@ -26,14 +26,15 @@ export default function Home() {
   }, []);
   
   return (
-    <section className="flex justify-around">
-      <div className="w-fll">
+    <section className="flex gap-x-[105px]">
+      <div className="w-full ml-[105px] mt-[175px]">
+
         {users &&
           users.map((user, index) => (
             <AllNames key={index} user={user} setData={setData} single={single}/>
           ))}
       </div>
-      <div className="w-fll">
+      <div className="w-full mr-[105px] mt-[175px]">
         <Single single={single} />
       </div>
     </section>
