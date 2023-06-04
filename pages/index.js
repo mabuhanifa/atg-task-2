@@ -27,13 +27,13 @@ export default function Home() {
   
   return (
     <section className="flex justify-around">
-      <div>
+      <div className="w-fll">
         {users &&
           users.map((user, index) => (
             <AllNames key={index} user={user} setData={setData} single={single}/>
           ))}
       </div>
-      <div>
+      <div className="w-fll">
         <Single single={single} />
       </div>
     </section>
