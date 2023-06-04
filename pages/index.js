@@ -24,14 +24,21 @@ export default function Home() {
     };
     fetchUsers();
   }, []);
-  
-  return (
-    <section className="flex gap-x-[105px]">
-      <div className="w-full ml-[105px] mt-[175px]">
 
+  return (
+    <section className="flex gap-x-[105px] justify-center">
+      <div className="w-[623px] ml-[105px] mt-[175px]">
+        
+        <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">USERS LIST</h1>
+        
         {users &&
           users.map((user, index) => (
-            <AllNames key={index} user={user} setData={setData} single={single}/>
+            <AllNames
+              key={index}
+              user={user}
+              setData={setData}
+              single={single}
+            />
           ))}
       </div>
       <div className="w-full mr-[105px] mt-[175px]">

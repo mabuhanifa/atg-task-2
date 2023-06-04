@@ -6,7 +6,9 @@ export default function AllNames({ user, setData, single }) {
   return (
     <div
       onClick={() => setData(user.profile.firstName, user.profile.lastName)}
-      className="bg-[#ECECEC] my-[5px] rounded"
+      className={`my-[10px] rounded ${
+        isActive ? "bg-[#D4D4D4]" : "bg-[#ECECEC]"
+      }`}
     >
       <div className="flex items-center px-2">
         <Image
@@ -16,11 +18,7 @@ export default function AllNames({ user, setData, single }) {
           height={50}
           className="rounded-full"
         />
-        <h1
-          className={`cursor-pointer p-5 w-[623px] font-[500] py-[18.5px] ${
-            isActive ? "font-bold" : ""
-          }`}
-        >
+        <h1 className="cursor-pointer p-5 w-[623px] font-[500] py-[18.5px]">
           {user.profile.firstName + " " + user.profile.lastName}
         </h1>
       </div>
