@@ -20,22 +20,22 @@ export default function User({ single }) {
 
       <div className="flex justify-center">
         <div>
-          <p className="bg-[#DBDBDB] w-[304px] h-[87px] p-2 border border-[#6C6C6C] text-sm rounded my-[30px]">
+          <p className="font-[500]  bg-[#DBDBDB] w-[304px] h-[87px] p-2 border border-[#6C6C6C] text-sm rounded my-[30px]">
             {single?.Bio}
           </p>
 
           <span className="font-[500] text-xs ">Full Name</span>
-          <p className="bg-[#DBDBDB] p-2 border border-[#6C6C6C] text-sm rounded mt-[5px] mb-[15px]">
+          <p className="font-[500] text-xs bg-[#DBDBDB] p-2 border border-[#6C6C6C] rounded mt-[5px] mb-[15px]">
             {single?.profile?.firstName + " " + single.profile?.lastName}
           </p>
 
           <span className="font-[500] text-xs ">Job Title</span>
-          <p className="bg-[#DBDBDB] p-2 border border-[#6C6C6C] text-sm rounded mt-[5px] mb-[15px]">
+          <p className="font-[500] text-xs bg-[#DBDBDB] p-2 border border-[#6C6C6C]  rounded mt-[5px] mb-[15px]">
             {single?.profile?.email}
           </p>
 
           <span className="font-[500] text-xs ">Email</span>
-          <p className="bg-[#DBDBDB] p-2 border border-[#6C6C6C] text-sm rounded mt-[5px] mb-[15px]">
+          <p className="font-[500] text-xs bg-[#DBDBDB] p-2 border border-[#6C6C6C] rounded mt-[5px] mb-[15px]">
             {single?.jobTitle}
           </p>
         </div>

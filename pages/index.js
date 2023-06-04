@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <>
       <section className="flex gap-x-[105px] justify-center">
-        <div className="w-[623px] ml-[105px] mt-[175px]">
+        <div className="w-[623px] ml-[105px] mt-20">
           <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
             USERS LIST
           </h1>
@@ -67,7 +67,7 @@ export default function Home() {
               />
             ))}
         </div>
-        <div className="w-[502px] mr-[105px] mt-[175px] ">
+        <div className="w-[502px] mr-[105px] mt-20">
           <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
             USERS LIST
           </h1>

@@ -10,9 +10,9 @@ export default function Pagination({
       <div className="my-10">
         <button
           onClick={() => getPrevPage()}
-          className="text-xl font-bold text-gray-700 mx-2"
+          className="font-bold text-gray-700 mx-2"
         >
-            Previous
+            	&#8592;
         </button>
         
           {[...Array(totalPages)].map((_, i) => (
@@ -20,7 +20,7 @@ export default function Pagination({
               onClick={() => selectPageHandler(i + 1)}
               className={
                 i === page - 1
-                  ? "font-bold inline-block px-2.5 py-1 rounded mx-1 bg-gray-300 text-blue-700"
+                  ? "font-bold inline-block px-2.5 py-1 rounded mx-1 bg-blue-500 text-white"
                   : "text-gray inline-block px-2.5 py-1 rounded mx-1"
               }
               key={i}
@@ -31,9 +31,9 @@ export default function Pagination({
         
         <button
           onClick={() => getNextPage()}
-          className="mx-2 text-xl font-bold text-gray-700"
+          className="font-bold text-gray-700 mx-2"
         >
-          Next
+          &#8594;
         </button>
       </div>
     </>
