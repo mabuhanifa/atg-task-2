@@ -16,7 +16,7 @@ export default function User({ single }) {
         </div>
       </div>
 
-      <p className="my-4 font-[500] text-center">@{single.profile?.username}</p>
+      <p className="my-4 font-[500] text-center text-sm">@{single.profile?.username}</p>
 
       <div className="flex justify-center">
         <div>
