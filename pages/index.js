@@ -1,5 +1,5 @@
 import AllNames from "@/components/AllNames";
-import Single from "@/components/Single";
+import User from "@/components/User";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -28,9 +28,10 @@ export default function Home() {
   return (
     <section className="flex gap-x-[105px] justify-center">
       <div className="w-[623px] ml-[105px] mt-[175px]">
-        
-        <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">USERS LIST</h1>
-        
+        <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
+          USERS LIST
+        </h1>
+
         {users &&
           users.map((user, index) => (
             <AllNames
@@ -41,8 +42,11 @@ export default function Home() {
             />
           ))}
       </div>
-      <div className="w-full mr-[105px] mt-[175px]">
-        <Single single={single} />
+      <div className="w-[502px] mr-[105px] mt-[175px] ">
+        <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
+          USERS LIST
+        </h1>
+        <User single={single} />
       </div>
     </section>
   );
