@@ -20,7 +20,7 @@ export default function User({ single }) {
 
       <div className="flex justify-center">
         <div>
-          <p className="font-[500]  bg-[#DBDBDB] w-[304px] h-[87px] p-2 border border-[#6C6C6C] text-sm rounded my-[30px]">
+          <p className="font-[500]  bg-[#DBDBDB] w-60 md:w-[304px] h-[87px] p-2 border border-[#6C6C6C] text-sm rounded my-[30px]">
             {single?.Bio}
           </p>
 

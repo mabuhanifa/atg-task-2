@@ -16,9 +16,9 @@ export default function AllNames({ user, setData, single }) {
           alt="avatar"
           width={52}
           height={50}
-          className="rounded-full"
+          className="rounded-full w-5 h-5 md:h-[50px] md:w-[52px]"
         />
-        <h1 className="cursor-pointer p-5 w-[623px] font-[500] py-[18.5px]">
+        <h1 className="text-sm cursor-pointer p-5 md:w-[623px] font-[500] py-[18.5px] md:text-2xl">
           {user.profile.firstName + " " + user.profile.lastName}
         </h1>
       </div>
