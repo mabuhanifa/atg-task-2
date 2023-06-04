@@ -5,7 +5,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={montserrat.className}>
+    <main className={`2xl:px-10 ${montserrat.className}`}>
       <Component {...pageProps} />
     </main>
   );
