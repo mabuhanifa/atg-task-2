@@ -24,15 +24,15 @@ export default function Home() {
     };
     fetchUsers();
   }, []);
+  
   return (
     <section className="flex justify-around">
       <div>
         {users &&
           users.map((user, index) => (
-            <AllNames key={index} user={user} setData={setData} />
+            <AllNames key={index} user={user} setData={setData} single={single}/>
           ))}
       </div>
-
       <div>
         <Single single={single} />
       </div>
