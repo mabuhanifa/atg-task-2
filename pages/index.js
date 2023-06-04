@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [users, setUsers] = useState([]);
   const [single, setSingle] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const setData = (f, l) => {
     const singleUser = users.find(
@@ -17,16 +18,20 @@ export default function Home() {
 
   useEffect(() => {
     const fetchUsers = async () => {
+      setLoading(true);
       const response = await fetch(
         "https://602e7c2c4410730017c50b9d.mockapi.io/users"
       );
       const data = await response.json();
+      if (data.length > 0) {
+        setLoading(false);
+      }
       setUsers(data);
       setSingle(data[0]);
     };
     fetchUsers();
   }, []);
-  
+
   const [page, setPage] = useState(1);
   const perPage = 10;
   const lastIndex = page * perPage;
@@ -50,9 +55,11 @@ export default function Home() {
       setPage(page - 1);
     }
   };
+  if (loading) {
+    return <Spinner />;
+  }
   return (
     <>
-    <Spinner/>
       <section className="flex gap-x-[105px] justify-center">
         <div className="w-[623px] ml-[105px] mt-20">
           <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
@@ -73,6 +80,7 @@ export default function Home() {
           <h1 className="py-[21px] bg-[#C5DFFF] text-center font-[500] rd">
             USERS LIST
           </h1>
+
           <User single={single} />
         </div>
       </section>
