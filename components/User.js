@@ -16,7 +16,9 @@ export default function User({ single }) {
         </div>
       </div>
 
-      <p className="my-4 font-[500] text-center text-sm">@{single.profile?.username}</p>
+      <p className="my-4 font-[500] text-center text-sm">
+        @{single.profile?.username}
+      </p>
 
       <div className="flex justify-center">
         <div>
@@ -29,12 +31,12 @@ export default function User({ single }) {
             {single?.profile?.firstName + " " + single.profile?.lastName}
           </p>
 
-          <span className="font-[500] text-xs ">Job Title</span>
+          <span className="font-[500] text-xs ">Email</span>
           <p className="font-[500] text-xs bg-[#DBDBDB] p-2 border border-[#6C6C6C]  rounded mt-[5px] mb-[15px]">
             {single?.profile?.email}
           </p>
 
-          <span className="font-[500] text-xs ">Email</span>
+          <span className="font-[500] text-xs ">Job Title</span>
           <p className="font-[500] text-xs bg-[#DBDBDB] p-2 border border-[#6C6C6C] rounded mt-[5px] mb-[15px]">
             {single?.jobTitle}
           </p>
